@@ -22,6 +22,8 @@
 # include <config.h>
 #endif /* HAVE_CONFIG_H */
 
+#undef HAVE_NTP_GETTIME
+#undef HAVE_SYS_CPUSET_H
 
 #ifdef linux
 #	ifndef _GNU_SOURCE
@@ -65,6 +67,7 @@
 #include <sys/select.h>
 #include <sys/ioctl.h>
 #include <sys/param.h>
+#include <sys/sysproto.h>
 #include <arpa/inet.h>
 #include <stdarg.h>
 #include <syslog.h>
